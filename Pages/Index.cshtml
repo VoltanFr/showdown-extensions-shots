@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Markdown rendering with Beautifying";
+}
+@section scripts {
+<script type="text/javascript" src="~/js/index.js" asp-append-version="true"></script>
+}
+
+<div>
+    <h2>Input</h2>
+    <p>
+        <textarea id="inputTextArea" rows="15" max-rows="30" style="width:100%"># Your Markdown input here</textarea>
+    </p>
+    <p>
+        <button onclick="buttonClicked();">Render</button>
+    </p>
+
+    <h2>Rendered</h2>
+    <p>
+        <div id="renderedDiv" style="border-style:solid;border-width:1px;"></div>
+    </p>
+</div>
