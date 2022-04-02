@@ -35,7 +35,8 @@ showdown.extension('replaceWithRegex', function () {
 });
 
 //Sample #2: replace any header (listener)
-//This uses a 'before' event, in which the whole raw text is passed (not the not the "partial text" that was caught by the regex and actually changed by the subparser.)
+//This uses 'before' and 'after' events, in which the whole raw text is passed (not the not the "partial text" that was caught by the regex and actually changed by the subparser.)
+//The 'after' event is called after conversion, which means its result will not be parsed as markdown
 showdown.extension('replaceHeader', function () {
     return [{
         type: 'listener',
